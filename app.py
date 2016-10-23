@@ -2,10 +2,11 @@ from flask import Flask, render_template
 from flask_assets import Environment, Bundle
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
 
 assets = Environment(app)
-less = Bundle('styles/app.less', filters='less', output='app.css')
-assets.register('less',less)
+less = Bundle('styles/app.less', filters='less',depends='styles/less/**/*.less', output='app.css')
+assets.register('less', less)
 
 @app.route('/')
 def index():
