@@ -197,3 +197,6 @@ Temporary Items
 
 /app/assets/javascripts/admin/node_modules/*
 /node_modules/*
+
+# Flask stuff
+.webassets-cache

@@ -353,14 +353,6 @@ td,
 th {
   padding: 0;
 }
-body {
-  background: #fff;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  width: 100%;
-  font: 400 14px/23px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-}
 .profile-pic {
   position: absolute;
   top: 40%;
@@ -558,4 +550,12 @@ p a {
   to {
     opacity: .0;
   }
+}
+body {
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  font: 400 14px/23px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
