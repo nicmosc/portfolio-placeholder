@@ -353,6 +353,10 @@ td,
 th {
   padding: 0;
 }
+@font-face {
+  font-family: Menlo;
+  src: url(../../assets/fonts/Menlo-Regular.ttf);
+}
 .profile-pic {
   position: absolute;
   top: 40%;
@@ -511,6 +515,8 @@ p:nth-child(3),
 p:nth-child(4),
 p:nth-child(5) {
   animation: type2 4s steps(60, end);
+  animation-fill-mode: forwards;
+  /*when the spec is finished*/
   opacity: 0;
 }
 p:nth-child(2) {
