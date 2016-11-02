@@ -355,7 +355,7 @@ th {
 }
 @font-face {
   font-family: Menlo;
-  src: url(../../assets/fonts/Menlo-Regular.ttf);
+  src: url('/static/assets/fonts/Menlo-Regular.ttf');
 }
 .profile-pic {
   position: absolute;
