@@ -376,6 +376,11 @@ th {
   left: 50%;
   margin-left: -100px;
 }
+@media only screen and (max-width: 480px) {
+  .wrapperloading {
+    top: 30%;
+  }
+}
 .wrapperloading .loading.up {
   position: absolute;
   height: 200px;
@@ -483,19 +488,27 @@ th {
     transform: rotate(360deg);
   }
 }
-.terminal {
+.terminal-wrapper {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 100px;
-  margin-left: -200px;
-  /* Half the width */
-  margin-top: 150px;
+  left: 0;
+  top: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+}
+@media only screen and (max-width: 320px) {
+  .terminal-wrapper {
+    justify-content: flex-start;
+  }
+}
+.terminal {
+  overflow: scroll;
 }
 p {
   color: #222222;
   font-family: "Menlo";
-  font-size: 12pt;
+  font-size: 18px;
   margin: 10px 0 0 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -506,6 +519,16 @@ p {
 }
 p.error {
   color: red;
+}
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  p {
+    font-size: 10px;
+  }
 }
 .fade {
   color: #a0a0a0;

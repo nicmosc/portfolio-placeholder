@@ -3,6 +3,10 @@
     src: url(../../../assets/fonts/Menlo-Regular.ttf);
 }
 
+@screen-m: ~'only screen and (max-width: 768px)';
+@screen-xs: ~'only screen and (max-width: 320px)';
+@screen-s: ~'only screen and (max-width: 480px)';
+
 .profile-pic {
   position:absolute;
   top: 40%;
@@ -23,6 +27,10 @@
   margin-top: -100px;
   left: 50%;
   margin-left: -100px;
+
+  @media @screen-s {
+    top: 30%;
+  }
 }
 
 .wrapperloading .loading.up {
@@ -148,21 +156,28 @@
 
 // TYPING TEXT
 
+.terminal-wrapper {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+
+  @media @screen-xs {
+    justify-content: flex-start;
+  }
+}
+
 .terminal {
-  //background: red;
-  position:absolute;
-  top: 40%;
-  left: 50%;
-  width: 100px;
-  //margin-top: -25px; /* Half the height */
-  margin-left: -200px; /* Half the width */
-  margin-top: 150px;
+  overflow: scroll;
 }
 
 p{
   color:@darker-gray;
   font-family: "Menlo";
-  font-size: 12pt;
+  font-size: 18px;
   margin: 10px 0 0 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -173,6 +188,15 @@ p{
   &.error {
     color: red;
   }
+
+  @media @screen-m {
+    font-size: 15px;
+  }
+
+  @media @screen-xs {
+    font-size: 10px;
+  }
+
 }
 
 .fade {
